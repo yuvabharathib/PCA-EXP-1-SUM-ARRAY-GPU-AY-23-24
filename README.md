@@ -1,24 +1,18 @@
-#  EXP-1  SUM ARRAY GPU
-<h3>NAME: Yuvabharathi.B</h3>
-<h3>REGISTER NO: 212222230181</h3>
-<h3>DATE: </h3>
+# PCA: EXP-1  SUM ARRAY GPU
+### Name: Yuvabharathi.B
+### Reg. No.: 212222230181
+### Exp. No.: 01
+### Date: 
 <h1> <align=center> SUM ARRAY ON HOST AND DEVICE </h3>
-  
 PCA-GPU-based-vector-summation.-Explore-the-differences.
-
 i) Using the program sumArraysOnGPU-timer.cu, set the block.x = 1023. Recompile and run it. Compare the result with the execution configuration of block.x = 1024. Try to explain the difference and the reason.
 
-
 ii) Refer to sumArraysOnGPU-timer.cu, and let block.x = 256. Make a new kernel to let each thread handle two elements. Compare the results with other execution confi gurations.
-
-
 ## AIM:
 
 To perform vector addition on host and device.
 
-
 ## EQUIPMENTS REQUIRED:
-
 Hardware – PCs with NVIDIA GPU & CUDA NVCC
 Google Colab with NVCC Compiler
 
@@ -35,10 +29,9 @@ Google Colab with NVCC Compiler
 6. Copy output data from the device to the host and verify the results against the host's sequential vector addition. Free memory on the host and the device.
 
 ## PROGRAM:
-```
+```c
 #include <cuda_runtime.h>
 #include <stdio.h>
-
 void checkResult(float *hostRef, float *gpuRef, const int N)
 {
     double epsilon = 1.0E-8;
@@ -178,11 +171,17 @@ int main(int argc, char **argv)
     return(0);
 }
 ```
-
 ## OUTPUT:
+![image](https://github.com/Ronick2005/PCA-EXP-1-SUM-ARRAY-GPU-AY-23-24/assets/83219341/de2f34cc-87a1-4445-aa9e-c28daef4dfa8)
 
-![image](https://github.com/user-attachments/assets/f3e9392e-c91e-45be-8e71-60f8bc8bc74b)
+### block.x = 1023
+![image](https://github.com/Ronick2005/PCA-EXP-1-SUM-ARRAY-GPU-AY-23-24/assets/83219341/3769578e-c4eb-4f8e-ab80-39987d04febd)
 
+### block.x = 1024
+![image](https://github.com/Ronick2005/PCA-EXP-1-SUM-ARRAY-GPU-AY-23-24/assets/83219341/4b6ec847-1957-49ed-b794-a76883131e49)
+
+### block.x = 256
+![image](https://github.com/Ronick2005/PCA-EXP-1-SUM-ARRAY-GPU-AY-23-24/assets/83219341/cd2d5a40-8621-46d6-aec9-5c1e1de93c53)
 
 ## RESULT:
-Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
+Thus, the implementation of sum arrays on the host and device is done in nvcc cuda using a random number.
